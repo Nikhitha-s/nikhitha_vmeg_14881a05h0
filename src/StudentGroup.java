@@ -36,20 +36,20 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void addFirst(Student student) {
-         Student[] temp = new Student[this.students.length+1];
-		 temp[0] = student;
-		 for(int i = 1; i < temp.length; i++)
-			 temp[i] = this.students[i-1];
-		 this.students = temp;
+         Student[] tp = new Student[this.students.length+1];
+		 tp[0] = student;
+		 for(int i = 1; i < tp.length; i++)
+			 tp[i] = this.students[i-1];
+		 this.students = tp;
 	}
 
 	@Override
 	public void addLast(Student student) {
-         Student[] temp = new Student[this.getStudents().length+1];
+         Student[] temp1 = new Student[this.getStudents().length+1];
 		 for(int i = 0; i < this.students.length; i++)
-			 temp[i] = this.students[i];
-		 temp[temp.length - 1] = student;
-		 this.students = temp;
+			 temp1[i] = this.students[i];
+		 temp1[temp1.length - 1] = student;
+		 this.students = temp1;
 	}
 
 	@Override
