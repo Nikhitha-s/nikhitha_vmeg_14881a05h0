@@ -63,9 +63,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(Student student) {
          Student[] temp = new Student[this.students.length-1]; 
-		 int c = 0;
+		 int a = 0;
 		 for(int i = 0; i < this.students.length; i++)
-			 if(this.students[i] != student) temp[c++] = this.students[i];
+			 if(this.students[i] != student) temp[a++] = this.students[i];
 		 this.students = temp;
 	}
 
