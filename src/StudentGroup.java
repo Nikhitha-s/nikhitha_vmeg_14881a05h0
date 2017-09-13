@@ -16,7 +16,14 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudents() {
+         if(this.students==NULL)
+      {
+       throw new IllegalArgumentException("null");
+	}
+	else{
+
          return this.students;
+	}
 	}
 
 	@Override
@@ -55,9 +62,9 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public void remove(int index) {
          Student[] temp = new Student[this.students.length-1]; 
-		 int c = 0;
+		 int x = 0;
 		 for(int i = 0; i < this.students.length; i++)
-			 if(i != index) temp[c++] = this.students[i];
+			 if(i != index) temp[x++] = this.students[i];
 		 this.students = temp;
 	}
 
@@ -225,3 +232,5 @@ public class StudentGroup implements StudentArrayOperation {
 	}
 
 }
+	
+
